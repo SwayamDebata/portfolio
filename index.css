@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+.bla{
+    transition: transform ease .4s;
+    padding: 0 10px;
+}
+}
+@layer components{
+.bla:hover{
+    transform: scale(1.3);
+}
+}

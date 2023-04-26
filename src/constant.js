@@ -1,0 +1,18 @@
+export const RESUME_URL = "https://drive.google.com/file/d/1KhHWH9T34IKdRmhmk7-Pe_BHSCnxs3SO/view?usp=share_link";
+export const HTML_DOC_URL = "https://www.w3.org/2010/Talks/1117-html5-plh/basic_html5_doc.html";
+export const CSS_DOC_URL = "https://developer.mozilla.org/en-US/docs/Web/CSS";
+export const JS_DOC_URL = "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
+export const REACT_DOC_URL = "https://legacy.reactjs.org/docs/getting-started.html";
+export const TAILWIND_DOC_URL = "https://tailwindcss.com/docs/installation";
+export const BOOTSTRAP_DOC_URL = "https://getbootstrap.com/docs/4.1/getting-started/introduction/";
+export const JAVA_DOC_URL = "https://docs.oracle.com/en/java/";
+export const MYSQL_DOC_URL = "https://dev.mysql.com/doc/";
+export const GIT_DOC_URL = "https://git-scm.com/doc";
+export const BABEL_DOC_URL ="https://babeljs.io/docs/";
+export const PROJECT_PORTFOLIO_URL = "https://github.com/SwayamDebata/LT_DEC2021_SwayamDebata.git";
+export const PROJECT_PORTFOLIO2_URL = "https://github.com/SwayamDebata/portfolio.git";
+export const PROJECT_BIGBITES_URL ="https://github.com/SwayamDebata/portfolio.git";
+export const IG_PROFILE_URL = "https://instagram.com/theswayamdiary?igshid=ZDdkNTZiNTM=";
+export const GITHUB_PROFILE_URL = "https://github.com/SwayamDebata";
+export const LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/swayam-debata-3b16821a0/";
+export const MAIL_ME = "mailto:swayamdebata2003@gmail.com";
