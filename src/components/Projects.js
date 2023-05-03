@@ -3,7 +3,7 @@ import bg from '../assets/images/stars.png'
 import bigbites from '../assets/images/bigbites.png'
 import portfolio from '../assets/images/portfolio.png'
 import portfolio2 from '../assets/images/portfolio2.png'
-import { PROJECT_PORTFOLIO_URL, PROJECT_PORTFOLIO2_URL, PROJECT_BIGBITES_URL } from '../constant';
+import { PROJECT_PORTFOLIO_URL, PROJECT_PORTFOLIO2_URL, PROJECT_BIGBITES_URL, BIGBITES_WEB_URL } from '../constant';
 
 const Projects = () =>{
     return(
@@ -12,7 +12,7 @@ const Projects = () =>{
         <h1 className="text-xl font-press_start text-white text-center items-center">Projects</h1>
         <div className="flex flex-wrap justify-center w-full tl:justify-center gap-8 pt-5">
         <div className="w-[240px] h-[350px] rounded overflow-hidden shadow-lg">
-        <img className="w-60 h-[160px]" src={bigbites} alt="bigbites"/>
+        <a href={BIGBITES_WEB_URL} target='_blank'><img className="w-60 h-[160px]" src={bigbites} alt="bigbites"/></a>
         <div className="px-6 py-4">
         <div className="font-press_start text-sm mb-2 text-white border-b-4">Big bites</div>
         <p className="text-white text-xs font-press_start w-[230px]">
