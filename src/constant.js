@@ -1,4 +1,4 @@
-export const RESUME_URL = "https://drive.google.com/file/d/1KhHWH9T34IKdRmhmk7-Pe_BHSCnxs3SO/view?usp=share_link";
+export const RESUME_URL = "https://drive.google.com/file/d/1s9kFh4N9o1ggXODX553veAGgOqEyNEu2/view?usp=share_link";
 export const HTML_DOC_URL = "https://www.w3.org/2010/Talks/1117-html5-plh/basic_html5_doc.html";
 export const CSS_DOC_URL = "https://developer.mozilla.org/en-US/docs/Web/CSS";
 export const JS_DOC_URL = "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
