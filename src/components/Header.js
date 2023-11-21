@@ -17,7 +17,7 @@ return (
         <h1 className='text-green-400 pt-5 p-4 text-3xl font-press_start'>
         <TypeAnimation
         sequence={[
-            'Hi! I am Swayam',
+            'Hi! I am Swayam Devta',
             7000,
         ]}
         />
