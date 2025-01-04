@@ -1,5 +1,4 @@
 import React from 'react';
-import bg from '../assets/images/stars.png'
 import bigbites from '../assets/images/bigbites.png'
 import portfolio from '../assets/images/portfolio.png'
 import portfolio2 from '../assets/images/portfolio2.png'
@@ -8,7 +7,7 @@ import { PROJECT_PORTFOLIO_URL, PROJECT_PORTFOLIO2_URL, PROJECT_BIGBITES_URL, BI
 const Projects = () =>{
     return(
         <>
-    <div id='project' style={{backgroundImage: `url(${bg})`}} className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
+    <div id='project' className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
         <h1 className="text-xl font-press_start text-white text-center items-center">Projects</h1>
         <div className="flex flex-wrap justify-center w-full tl:justify-center gap-8 pt-5">
         <div className="w-[240px] h-[350px] rounded overflow-hidden shadow-lg">

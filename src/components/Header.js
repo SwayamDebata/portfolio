@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import bg from '../assets/images/stars.png'
 import logo from '../assets/images/logo.png'
 import { TypeAnimation } from 'react-type-animation';
 import { RESUME_URL } from '../constant';
@@ -9,7 +8,7 @@ import { RESUME_URL } from '../constant';
 const Header = () => {
 return (
 <>
-<div id='home' style={{backgroundImage: `url(${bg})`}} className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
+<div id='home' className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
     <Navbar/>
     <div className="wrapper flex justify-between items-center h-screen w-full px-20 lg:justify-center lg:px-6 tl:flex-col ">
         <div className="content lg:text-center justify-between">
@@ -17,7 +16,7 @@ return (
         <h1 className='text-green-400 pt-5 p-4 text-3xl font-press_start'>
         <TypeAnimation
         sequence={[
-            'Hi! I am Swayam Devta',
+            'Hi! I am Swayam',
             7000,
         ]}
         />

@@ -1,5 +1,4 @@
 import React from 'react';
-import bg from '../assets/images/stars.png'
 import spotify from '../assets/images/spotify.svg';
 import { GITHUB_PROFILE_URL, LINKEDIN_PROFILE_URL, IG_PROFILE_URL, MAIL_ME } from '../constant';
 
@@ -12,7 +11,7 @@ const Footer = () => {
 
   return (
     <>
-    <div id='footer' style={{backgroundImage: `url(${bg})`}} className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col tl:pt-[150px]'>
+    <div id='footer' className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col tl:pt-[150px]'>
       <h1 className="text-xl font-press_start pt-[150px] text-white text-center items-center">Let's Connect</h1>
       <div className='flex mt-10 justify-around m-8 font-press_start text-white text-xs tl:flex-col'>
       <div>

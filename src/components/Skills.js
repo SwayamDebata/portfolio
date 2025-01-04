@@ -1,6 +1,5 @@
 import React from "react";
 import { HTML_DOC_URL, CSS_DOC_URL, JS_DOC_URL, TAILWIND_DOC_URL, BOOTSTRAP_DOC_URL, REACT_DOC_URL, JAVA_DOC_URL, MYSQL_DOC_URL, GIT_DOC_URL, BABEL_DOC_URL } from "../constant";
-import bg from '../assets/images/stars.png'
 import html from '../assets/images/skill/html.png';
 import css3 from '../assets/images/skill/css3.png';
 import javascript from '../assets/images/skill/javascript.png';
@@ -16,7 +15,7 @@ const Skills = () => {
   return (
     <>
     <div id="skill" className="container">
-      <div style={{backgroundImage: `url(${bg})`}} className=' bg-center pt-[120px] bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
+      <div className=' bg-center pt-[120px] bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
       
       <h1 className="text-xl font-press_start text-white text-center items-center tl:pt-[220px]">SKILLS</h1>
       <div className="flex flex-wrap justify-center gap-6">

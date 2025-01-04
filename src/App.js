@@ -6,11 +6,14 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import AnimatedCursor from "react-animated-cursor";
+import ParticlesBackground from "./components/ParticlesBackground";
+
 
 function App() {
 return (
     <>  
-    <div className="bg-black">
+    <div> 
+    <ParticlesBackground/>
     <div className="cursor__dot">
         <AnimatedCursor
         innerSize={15}
@@ -26,9 +29,9 @@ return (
         <Skills />
         <Projects/>
         <Footer />
-    </div>
+        </div>
     </>
 );
 }
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App/>);
+
+export default App;

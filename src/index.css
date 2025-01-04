@@ -12,8 +12,18 @@
     padding: 0 10px;
 }
 }
+
 @layer components{
 .bla:hover{
     transform: scale(1.3);
 }
 }
+
+@layer base {
+  body {
+    background-color: #000000; 
+  }
+}
+
+
+
