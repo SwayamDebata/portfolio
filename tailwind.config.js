@@ -5,9 +5,9 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'lg2': {'max': '1623px'},
-      'lg': {'max': '1023px'},
-      'tl': {'max': '790px'},
+      'lg2': {'min': '1624px'}, // Larger screens with min-width: 1624px
+      'lg': {'min': '1024px'},   // Medium screens with min-width: 1024px
+      'tl': {'min': '791px'},    // Small screens with min-width: 791px
     },
     extend: {
       backgroundImage: {
@@ -15,10 +15,9 @@ module.exports = {
         'skills': "url('./src/assets/images/banner-bg.png')"
       },
       fontFamily: {
-        press_start: ['"Press Start 2P", "cursive"'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
-

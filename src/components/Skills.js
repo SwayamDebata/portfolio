@@ -14,10 +14,10 @@ import babel from '../assets/images/skill/babel.png';
 const Skills = () => {
   return (
     <>
-    <div id="skill" className="container">
+    <div id="skill" className="flex items-center justify-center bg-center bg-repeat h-screen w-full mb-40">
       <div className=' bg-center pt-[120px] bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
       
-      <h1 className="text-xl font-press_start text-white text-center items-center tl:pt-[220px]">SKILLS</h1>
+      <h1 className="text-xl font-orbitron text-green-400 text-center items-center tl:pt-[220px]">SKILLS</h1>
       <div className="flex flex-wrap justify-center gap-6">
       <a href={HTML_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={html} alt="" /></a>
       <a href={CSS_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={css3} alt="" /></a>
