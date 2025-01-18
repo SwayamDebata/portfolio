@@ -12,13 +12,11 @@ const About = () => {
         <h1 className="text-xl font-orbitron text-green-400 mb-6">ABOUT ME</h1>
         {/* Content */}
         <p className="text-white text-md leading-10">
-          Hello, My name is Swayam Debata and I'm from Bhubaneswar, Odisha. 
-          I'm currently pursuing my bachelor of technology in computer science Engineering. 
-          My technical skills include programming in Java, JavaScript, Database. 
-          I'm also familiar with several web technologies like HTML5, CSS3, React js, Tailwind, Bootstrap, etc. 
-          I always want to become successful in the field of software engineering technology by channelizing my technical skills to ensure professional and personal growth.
-          <br /><br />
-          Hobbies: Poetry, Storytelling, Travelling, Photography
+        Hey there! I'm Swayam, a passionate software engineer with a love for exploring the vast universe of technology and design. I thrive on building scalable, efficient solutions and enjoy collaborating with talented teams to turn ideas into reality.
+        Currently, I’m contributing to groundbreaking innovations at CometChat, where I specialize in creating scalable, user-friendly interfaces and features that enhance communication experiences.
+
+My journey in tech began with a curiosity for problem-solving and a love for design, which has evolved into a career where I get to build, optimize, and refine cutting-edge solutions.
+When I’m not writing code, you’ll find me immersed in the cosmos—whether it's through the lens of photography, crafting a new piece of poetry, or diving into storytelling. My aim is to create engaging, intuitive digital experiences that not only solve problems but also spark joy.
         </p>
       </div>
     </div>

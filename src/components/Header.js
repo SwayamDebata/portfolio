@@ -50,13 +50,13 @@ const Header = () => {
                   repeat={Infinity}
                 />
               </h1>
-              <p className="text-white p-4 text-xl font-orbitron">Welcome to</p>
-              <p className="text-white p-4 pt-1 text-xl font-orbitron">
-                My Portfolio
+              <p className="text-white p-4 text-xl font-orbitron">Let's explore my universe</p>
+              <p className="text-white p-4 pt-1 text-md font-orbitron">
+              a developer navigating the cosmos of design and technology!
               </p>
               <a href={RESUME_URL} target="_blank" rel="noreferrer">
                 <button className="text-white text-2md m-3 font-orbitron border-2 border-white rounded-2-xl p-2 hover:bg-green-600">
-                  My Resume
+                  Lunch Resume
                 </button>
               </a>
             </div>

@@ -13,56 +13,63 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Container */}
-      <div className="navbarcon flex justify-between items-center px-20 py-6 z-40 w-full font-orbitron bg-transparent text-white lg:px-6">
+      <div className="navbarcon flex justify-between items-center px-6 lg:px-20 py-6 z-40 w-full font-orbitron bg-transparent text-white">
         {/* Logo */}
         <h1 className="text-lg font-bold hover:text-green-400">Swayam.Dev</h1>
 
-        {/* Desktop Menu (Hidden on Mobile, Flex on larger screens) */}
-        <ul className="hidden lg:flex gap-10 text-lg">
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#about")}>About Me</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#skill")}>Skills</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#project")}>Projects</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#footer")}>Let's Connect</button>
-          </li>
-        </ul>
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex items-center gap-10">
+          {/* UFO Model */}
+          <div className="flex items-center">
+            <UFOBeamMenu />
+          </div>
 
-        {/* UFO Hamburger Menu (Visible Only on Mobile) */}
+          {/* Menu Items */}
+          <ul className="flex gap-6 text-lg">
+            <li className="hover:text-green-400">
+              <button onClick={() => scrollToSection("#about")}>About Me</button>
+            </li>
+            <li className="hover:text-green-400">
+              <button onClick={() => scrollToSection("#skill")}>Skills</button>
+            </li>
+            <li className="hover:text-green-400">
+              <button onClick={() => scrollToSection("#project")}>Projects</button>
+            </li>
+            <li className="hover:text-green-400">
+              <button onClick={() => scrollToSection("#footer")}>Let's Connect</button>
+            </li>
+          </ul>
+        </div>
+
+        {/* Mobile Layout */}
         <div
-          className="lg:hidden relative cursor-pointer"
+          className="lg:hidden flex flex-col items-center cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {/* UFO Shape */}
+          {/* UFO Model */}
           <UFOBeamMenu />
+
+          {/* Menu Items (Toggle Visibility) */}
+          {menuOpen && (
+            <ul className="flex flex-col gap-6 items-center -mt-12 bg-black bg-opacity-80 p-4 rounded-md shadow-lg w-[90%] max-w-xs">
+              <li className="hover:text-green-400">
+                <button onClick={() => scrollToSection("#about")}>About Me</button>
+              </li>
+              <li className="hover:text-green-400">
+                <button onClick={() => scrollToSection("#skill")}>Skills</button>
+              </li>
+              <li className="hover:text-green-400">
+                <button onClick={() => scrollToSection("#project")}>Projects</button>
+              </li>
+              <li className="hover:text-green-400">
+                <button onClick={() => scrollToSection("#footer")}>
+                  Let's Connect
+                </button>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
-
-      {/* Mobile Menu (Visible Only on Mobile) */}
-      {menuOpen && (
-        <div className="absolute top-20 left-28 mt-4 w-full text-white p-6 font-orbitron lg:hidden">
-        <ul className="flex flex-col gap-6 items-center">  {/* Align items to center */}
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#about")}>About Me</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#skill")}>Skills</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#project")}>Projects</button>
-          </li>
-          <li className="hover:text-green-400">
-            <button onClick={() => scrollToSection("#footer")}>Let's Connect</button>
-          </li>
-        </ul>
-      </div>
-      
-      )}
     </>
   );
 };
