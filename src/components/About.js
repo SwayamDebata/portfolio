@@ -1,4 +1,5 @@
 import React from "react";
+import UFOBeamMenu from "./UFOBeamMenu";
 
 const About = () => {
   return (
@@ -9,7 +10,6 @@ const About = () => {
       <div className="text-center max-w-5xl p-10 font-orbitron">
         {/* Title */}
         <h1 className="text-xl font-orbitron text-green-400 mb-6">ABOUT ME</h1>
-
         {/* Content */}
         <p className="text-white text-md leading-10">
           Hello, My name is Swayam Debata and I'm from Bhubaneswar, Odisha. 

@@ -11,7 +11,7 @@ const UFOModel = () => {
   // Always call the hook unconditionally
   useFrame(() => {
     if (ufoRef.current) {
-      ufoRef.current.rotation.z += 0.1; // Rotate only on the Y-axis
+      ufoRef.current.rotation.z += 0.1; // Rotate on the Z-axis
     }
   });
 
@@ -22,11 +22,13 @@ const UFOModel = () => {
   }
 
   return (
-    <group ref={ufoRef} rotation={[-Math.PI / 2, Math.PI / 24, 0]}>
+    <group ref={ufoRef} rotation={[-Math.PI / 2, Math.PI / 24, 0]} scale={[2.0, 2.0, 2.0]}>
+      {/* Scale applied to the UFO model */}
       <mesh geometry={nodes.Cube_0.geometry} material={materials["Material-material"]} />
     </group>
   );
 };
+
 
 
 

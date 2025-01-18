@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import AnimatedCursor from "react-animated-cursor";
 import ParticlesBackground from "./components/ParticlesBackground";
+import SpaceRadioPlayer from "./components/SpaceRadio";
 
 
 function App() {
@@ -25,6 +26,7 @@ return (
         />
     </div>
         <Header />
+        <SpaceRadioPlayer/>
         <About/>
         <Skills />
         <Projects/>
