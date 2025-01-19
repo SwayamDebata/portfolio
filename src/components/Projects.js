@@ -1,48 +1,41 @@
-import React from 'react';
-import bigbites from '../assets/images/bigbites.png'
-import portfolio from '../assets/images/portfolio.png'
-import portfolio2 from '../assets/images/portfolio2.png'
-import { PROJECT_PORTFOLIO_URL, PROJECT_PORTFOLIO2_URL, PROJECT_BIGBITES_URL, BIGBITES_WEB_URL } from '../constant';
-
-const Projects = () =>{
-    return(
-        <>
-    <div id='project' className=' bg-center bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
-        <h1 className="text-xl font-orbitron text-green-400 text-center items-center">Projects</h1>
-        <div className="flex flex-wrap justify-center w-full tl:justify-center gap-8 pt-5">
-        <div className="w-[240px] h-[350px] rounded overflow-hidden shadow-lg">
-        <a href={BIGBITES_WEB_URL} target='_blank'><img className="w-60 h-[160px]" src={bigbites} alt="bigbites"/></a>
-        <div className="px-6 py-4">
-        <div className="font-orbitron text-sm mb-2 text-white border-b-4">Big bites</div>
-        <p className="text-white text-xs font-orbitron w-[230px]">
-        Food delivery app(Swiggy API) using React.js, Parcel, Tailwind css.
+import React from "react";
+const Projects = () => {
+  return (
+    <div
+      id="projects"
+      className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-20 lg:mt-0"
+    >
+      <div className="text-center max-w-5xl p-10 font-orbitron">
+        {/* Title */}
+        <h1 className="text-xl font-orbitron text-green-400 mb-6">Projects</h1>
+        {/* Content */}
+        <p className="text-white text-md leading-10">
+          My projects are a blend of innovation, design, and technical
+          expertise, showcasing my dedication to building impactful solutions.
+          At <b className="text-green-400">CometChat</b>, I contributed to developing and maintaining highly
+          customizable <b className="text-green-400">Chat UI Kits</b> for <b className="text-green-400">React, Angular, and Vue</b>,
+          empowering users to create seamless and interactive communication
+          experiences. From implementing dynamic features like mentions and
+          message scheduling to leading quality-focused initiatives like the Bug
+          Squash process, my work here reflects my commitment to enhancing
+          platform stability and user satisfaction. Beyond professional work, my
+          personal projects are a playground for creativity: - <b className="text-green-400">YouTube
+          Clone</b>: A fully functional video search and playback platform
+          leveraging <b className="text-green-400">React</b> and <b className="text-green-400">YouTube's public API</b>, crafted with a
+          sleek, responsive design using Tailwind CSS. - <b className="text-green-400">Quizzy</b>: A
+          dynamic quiz app that challenges users while tracking scores, built
+          with React.js and intuitive logic for real-time feedback and
+          timer-based interactions. - <b className="text-green-400">BigBites</b>: A feature-rich food delivery
+          app, integrating Swiggy API for restaurant listings, designed with
+          Shimmer UI, and built for seamless navigation with nested routing
+          and secure login functionalities using Formik and Yup. Each
+          project combines clean, efficient code with an eye for design,
+          reflecting my passion for both front-end and back-end development.
+          These creations not only solve problems but also bring ideas to life
+          in ways that are engaging and functional.
         </p>
-        <a href={PROJECT_BIGBITES_URL} target='_blank'><p className="border rounded-md w-[80px] font-orbitron text-white text-center ml-[50px] hover:bg-green-500 ">code</p></a>
-        </div>
-        </div>
-        <div className="w-[240px] h-[350px] rounded overflow-hidden shadow-lg">
-        <img className="w-60 h-[160px]" src={portfolio} alt="bigbites"/>
-        <div className="px-6 py-4">
-        <div className="font-orbitron text-sm mb-2 text-white border-b-4">Portfolio</div>
-        <p className="text-white text-xs font-orbitron w-[230px]">
-        A Basic Portfolio using HTML5, CSS3, JavaScript.
-        </p>
-        <a href={PROJECT_PORTFOLIO_URL} target='_blank'><p className="border rounded-md w-[80px] font-orbitron text-white text-center ml-[50px] mt-8 hover:bg-green-500">code</p></a>
-        </div>
-        </div>
-        <div className="w-[240px] h-[350px] rounded overflow-hidden shadow-lg">
-        <img className="w-60 h-[160px]" src={portfolio2} alt="bigbites"/>
-        <div className="px-6 py-4">
-        <div className="font-orbitron text-sm mb-2 text-white border-b-4 w-[220px]">My Portfolio</div>
-        <p className="text-white text-xs font-orbitron w-[230px]">
-        Modern portfolio using React, CSS, Tailwind, Parcel.
-        </p>
-        <a href={PROJECT_PORTFOLIO2_URL} target='_blank'><p className="border rounded-md w-[80px] font-orbitron text-white text-center ml-[50px] mt-8 hover:bg-green-500">code</p></a>
-        </div>
-        </div>
-        </div>
+      </div>
     </div>
-        </>
-    );
-}
+  );
+};
 export default Projects;

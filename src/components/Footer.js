@@ -17,19 +17,18 @@ const Footer = () => {
       <div className="flex justify-between items-center bg-center bg-cover bg-repeat py-10 px-6 font-orbitron text-white text-md">
         <div className="flex flex-col">
           <p>Copyright © 2023 - All rights reserved</p>
-          <p className="pt-4 text-xs border-b-2 w-[200px]">Made With..</p>
+          <p className="pt-4 text-md border-b-2 w-[200px]">Made with love, light years away</p>
           <div className="flex flex-col pt-5">
-            <p className="py-2 text-green-300">React</p>
-            <p className="py-2 text-green-300">ThreeJS</p>
-            <p className="py-2 text-green-300">ParticleJS</p>
-            <p className="py-2 text-green-300">React</p>
-            <p className="py-2 text-green-300">Tailwind</p>
-            <p className="py-2 text-green-300">CSS3</p>
-            <p className="py-2 text-blue-500">🪐 Made with love, light years away 🚀 🪐</p>
-            <p className="py-2 text-green-300 pt-6 text-xs">10 cups of coffee</p>
-            <p className="py-2 text-green-300 pt-6 text-xs">Coding Snack: Pizza, of course!</p>
-            <p className="py-2 text-green-300 pt-6 text-xs">🔧 Hours spent debugging: Too many to count</p>
-            <p className="py-2 text-green-300 hover:text-green-500">
+            <p className="py-2 text-green-300 text-xs">React</p>
+            <p className="py-2 text-green-300 text-xs">ThreeJS</p>
+            <p className="py-2 text-green-300 text-xs">ParticleJS</p>
+            <p className="py-2 text-green-300 text-xs">React</p>
+            <p className="py-2 text-green-300 text-xs">Tailwind</p>
+            <p className="py-2 text-green-300 text-xs">CSS3</p>
+            <p className="py-2 text-green-300 text-xs">20 cups of coffee</p>
+            <p className="py-2 text-green-300 text-xs">Coding Snack: Pizza, of course!</p>
+            <p className="py-2 text-green-300 text-xs">Hours spent: Too many to count</p>
+            <p className="py-2 text-green-300 hover:text-green-500 text-xs">
               <a
                 href="https://open.spotify.com/track/7MJQ9Nfxzh8LPZ9e9u68Fq?si=1840e3631eff42ec"
                 target="_blank"

@@ -1,7 +1,6 @@
 import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import * as THREE from "three";
 import backgroundMusic from "../assets/music/Ancient-Mars.mp3"; 
 
 const SpaceRadio = ({ onClick }) => {
@@ -33,7 +32,7 @@ const SpaceRadio = ({ onClick }) => {
 
 const SpaceRadioPlayer = () => {
   const audioRef = useRef(new Audio(backgroundMusic)); 
-
+  audioRef.current.loop = true;
   const handlePlayMusic = () => {
     if (audioRef.current.paused) {
       audioRef.current.play();
