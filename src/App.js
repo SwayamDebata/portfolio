@@ -8,6 +8,7 @@ import About from "./components/About";
 import AnimatedCursor from "react-animated-cursor";
 import ParticlesBackground from "./components/ParticlesBackground";
 import SpaceRadioPlayer from "./components/SpaceRadio";
+import UfoForProjects from "./components/UfoForProjects";
 
 
 function App() {
@@ -30,6 +31,7 @@ return (
         <About/>
         <Skills />
         <Projects/>
+        <UfoForProjects/>
         <Footer />
         </div>
     </>
