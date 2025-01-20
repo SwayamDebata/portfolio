@@ -1,9 +1,11 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
+
 const Projects = () => {
   return (
     <div
       id="projects"
-      className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-28 lg:mt-0"
+      className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-72 lg:mt-64"
     >
       <div className="text-center max-w-5xl p-10 font-orbitron">
         {/* Title */}
@@ -32,7 +34,13 @@ const Projects = () => {
           project combines clean, efficient code with an eye for design,
           reflecting my passion for both front-end and back-end development.
           These creations not only solve problems but also bring ideas to life
-          in ways that are engaging and functional.<br></br><br></br><br></br><b className="text-xl">click on the UFO to enter the world of projects</b>
+          in ways that are engaging and functional.<br></br><br></br><br></br><b className="text-xl"><TypeAnimation
+            sequence={["click on the UFO to enter the world of project", 7000]}
+            wrapper="b"
+            cursor={true}
+            repeat={Infinity}
+            className="text-green-400 text-lg font-orbitron"
+          /></b>
 
         </p>
       </div>

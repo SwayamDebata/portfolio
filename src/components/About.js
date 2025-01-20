@@ -1,5 +1,4 @@
 import React from "react";
-import UFOBeamMenu from "./UFOBeamMenu";
 
 const About = () => {
   return (
