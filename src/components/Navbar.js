@@ -33,7 +33,7 @@ const Navbar = () => {
               <button onClick={() => scrollToSection("#skill")}>Skills</button>
             </li>
             <li className="hover:text-green-400">
-              <button onClick={() => scrollToSection("#project")}>Projects</button>
+              <button onClick={() => scrollToSection("#projects")}>Projects</button>
             </li>
             <li className="hover:text-green-400">
               <button onClick={() => scrollToSection("#footer")}>Let's Connect</button>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
           {/* Menu Items (Toggle Visibility) */}
           {menuOpen && (
-            <ul className="flex flex-col gap-6 items-center -mt-12 bg-opacity-80 p-4 rounded-md shadow-lg w-[90%] max-w-xs">
+            <ul className="flex flex-col gap-6 items-center -mt-12 bg-opacity-80 p-4 rounded-md shadow-lg w-[90%] max-w-xs z-50">
               <li className="hover:text-green-400">
                 <button onClick={() => scrollToSection("#about")}>About Me</button>
               </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
                 <button onClick={() => scrollToSection("#skill")}>Skills</button>
               </li>
               <li className="hover:text-green-400">
-                <button onClick={() => scrollToSection("#project")}>Projects</button>
+                <button onClick={() => scrollToSection("#projects")}>Projects</button>
               </li>
               <li className="hover:text-green-400">
                 <button onClick={() => scrollToSection("#footer")}>
