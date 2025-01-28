@@ -35,7 +35,7 @@ const Projects = () => {
           reflecting my passion for both front-end and back-end development.
           These creations not only solve problems but also bring ideas to life
           in ways that are engaging and functional.<br></br><br></br><br></br><b className="text-xl"><TypeAnimation
-            sequence={["click on the UFO to enter the world of project", 7000]}
+            sequence={["click on the UFO to enter my world of projects", 7000]}
             wrapper="b"
             cursor={true}
             repeat={Infinity}
