@@ -34,7 +34,7 @@ const UfoForProjects = () => {
   return (
     <>
     <div
-      className="relative flex flex-col items-center lg:mt-48 mt-96 mb-24"
+      className="relative flex flex-col items-center lg:mt-48 mt-[480px] mb-24"
       onClick={handleRedirect} // Redirect on click
     >
       {/* 3D UFO Canvas */}

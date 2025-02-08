@@ -20,7 +20,7 @@ import vue from '../assets/images/skill/vue.png'
 const Skills = () => {
   return (
     <>
-    <div id="skill" className="flex items-center justify-center bg-center bg-repeat h-screen w-full mb-40">
+    <div id="skill" className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-24 lg:mt-0 mb-[550px]">
       <div className=' bg-center pt-[120px] bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
       
       <h1 className="text-xl font-orbitron text-green-400 text-center items-center tl:pt-[220px]">SKILLS</h1>
