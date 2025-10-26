@@ -36,7 +36,7 @@ const Header = () => {
           </div>
 
           <img
-            className="w-80 h-auto mt-8 rounded-full tl:w-[200px] lg:w-1/3"
+            className="w-80 h-auto mt-8 tl:w-[200px] lg:w-1/3"
             src={logo}
             alt="Logo"
           />
