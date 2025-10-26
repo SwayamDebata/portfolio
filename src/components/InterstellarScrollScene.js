@@ -52,22 +52,34 @@ function CosmicLines({ scrollY }) {
 const InterstellarScrollScene = () => {
   const [scrollY, setScrollY] = useState(0);
 
+  // Calculate which section we're in (every ~window.innerHeight)
+  const [section, setSection] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      setSection(Math.floor(window.scrollY / window.innerHeight));
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  // Responsive horizontal shift and scale for mobile
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const horizontalShift = isMobile
+    ? (section % 2 === 0 ? 1.2 : -2.2)
+    : (section % 2 === 0 ? 3 : -6);
+  const scale = isMobile ? 0.6 : 1;
+
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-      <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
+      <Canvas camera={{ position: [horizontalShift, 0, 5], fov: 60 }}>
         <ambientLight intensity={1.2} />
         <directionalLight position={[2, 2, 5]} intensity={1.2} />
-  {/* Only UFO remains for scroll effect */}
-  <MorphingTorusKnot scrollY={scrollY} />
-  <CosmicLines scrollY={scrollY} />
+        <group position={[horizontalShift, 0, 0]} scale={[scale, scale, scale]}>
+          <MorphingTorusKnot scrollY={scrollY} />
+          <CosmicLines scrollY={scrollY} />
+        </group>
       </Canvas>
     </div>
   );

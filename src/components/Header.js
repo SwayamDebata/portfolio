@@ -80,8 +80,8 @@ const Header = () => {
           </div>
 
           <div className="w-80 h-80 mt-8 tl:w-[200px] lg:w-1/3 flex items-center justify-center">
-            <div className="w-96 h-96 flex items-center justify-center">
-              <div className="w-[400px] h-[400px] flex items-center justify-center">
+            <div className="w-[500px] h-[500px] flex items-center justify-center">
+              <div className="w-[500px] h-[500px] flex items-center justify-center">
                 <Canvas camera={{ position: [0, 0, 4] }}>
                 <ambientLight intensity={0.7} />
                 <directionalLight position={[2, 2, 5]} intensity={1} />

@@ -16,7 +16,7 @@ function App() {
     return (
         <>
             <InterstellarScrollScene />
-            <div>
+            <div className="relative z-10">
                 <ParticlesBackground />
                 <div className="cursor__dot">
                     <AnimatedCursor
