@@ -1,8 +1,52 @@
 import React from "react";
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useLoader } from '@react-three/fiber';
+import * as THREE from 'three';
 import Navbar from "./Navbar";
 import logo from "../assets/images/logo.png";
 import { TypeAnimation } from "react-type-animation";
 import { RESUME_URL } from "../constant";
+// Starfield component
+
+
+// UFO component
+function UFO({ orbitRadius = 2.2, speed = 1.2 }) {
+  const ref = React.useRef();
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime() * speed;
+    if (ref.current) {
+      ref.current.position.x = Math.cos(t) * orbitRadius;
+      ref.current.position.z = Math.sin(t) * orbitRadius;
+      ref.current.position.y = 0.5 + Math.sin(t * 2) * 0.2;
+      ref.current.rotation.y = -t + Math.PI / 2;
+    }
+  });
+  return (
+    <group ref={ref}>
+      {/* Saucer */}
+      <mesh>
+        <cylinderGeometry args={[0.25, 0.5, 0.12, 32]} />
+        <meshStandardMaterial color="#b0e0e6" metalness={0.7} roughness={0.3} />
+      </mesh>
+      {/* Dome */}
+      <mesh position={[0, 0.11, 0]}>
+        <sphereGeometry args={[0.18, 24, 24, 0, Math.PI * 2, 0, Math.PI / 2]} />
+        <meshStandardMaterial color="#e0ffff" transparent opacity={0.7} />
+      </mesh>
+      {/* Lights */}
+      <mesh position={[0.22, -0.05, 0]}>
+        <sphereGeometry args={[0.04, 8, 8]} />
+        <meshBasicMaterial color="#39ff14" />
+      </mesh>
+      <mesh position={[-0.22, -0.05, 0]}>
+        <sphereGeometry args={[0.04, 8, 8]} />
+        <meshBasicMaterial color="#39ff14" />
+      </mesh>
+    </group>
+  );
+}
+
+
 
 const Header = () => {
   return (
@@ -35,11 +79,30 @@ const Header = () => {
             </div>
           </div>
 
-          <img
-            className="w-80 h-auto mt-8 tl:w-[200px] lg:w-1/3"
-            src={logo}
-            alt="Logo"
-          />
+          <div className="w-80 h-80 mt-8 tl:w-[200px] lg:w-1/3 flex items-center justify-center">
+            <div className="w-96 h-96 flex items-center justify-center">
+              <div className="w-[400px] h-[400px] flex items-center justify-center">
+                <Canvas camera={{ position: [0, 0, 4] }}>
+                <ambientLight intensity={0.7} />
+                <directionalLight position={[2, 2, 5]} intensity={1} />
+                {/* Logo as a plane in the center */}
+                {(() => {
+                  const LogoPlane = () => {
+                    const texture = useLoader(THREE.TextureLoader, logo);
+                    return (
+                      <mesh scale={[2.5, 2.5, 2.5]}>
+                        <planeGeometry args={[1.5, 1.5]} />
+                        <meshStandardMaterial map={texture} transparent={true} />
+                      </mesh>
+                    );
+                  };
+                  return <LogoPlane />;
+                })()}
+                <UFO orbitRadius={1.7} speed={1.2} />
+                </Canvas>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="text-center mt-10">
           <TypeAnimation

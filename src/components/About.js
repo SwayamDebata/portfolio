@@ -4,18 +4,16 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-20 lg:mt-0"
+      className="flex items-center justify-center bg-center bg-repeat min-h-screen w-full mt-10 lg:mt-0 px-2 sm:px-4"
     >
-      <div className="text-center max-w-5xl p-10 font-orbitron">
-        {/* Title */}
+      <div className="text-center max-w-2xl sm:max-w-4xl p-4 sm:p-10 font-orbitron">
         <h1 className="text-xl font-orbitron text-green-400 mb-6">ABOUT ME</h1>
-        {/* Content */}
         <p className="text-white text-md leading-10">
-        Hey there! I'm Swayam, a passionate software engineer with a love for exploring the vast universe of technology and design. I thrive on building scalable, efficient solutions and enjoy collaborating with talented teams to turn ideas into reality.
-        Currently, I’m contributing to groundbreaking innovations at CometChat, where I specialize in creating scalable, user-friendly interfaces and features that enhance communication experiences.
-
-My journey in tech began with a curiosity for problem-solving and a love for design, which has evolved into a career where I get to build, optimize, and refine cutting-edge solutions.
-When I’m not writing code, you’ll find me immersed in the cosmos—whether it's through the lens of photography, crafting a new piece of poetry, or diving into storytelling. My aim is to create engaging, intuitive digital experiences that not only solve problems but also spark joy.
+          <span className="text-green-400">Cosmic Coder. AI Explorer. Full-Stack Voyager.</span><br/><br/>
+          Welcome to my universe! I'm Swayam, a full-stack developer with 2+ years of experience navigating the galaxies of web and mobile technology. My starship is powered by React, React Native, Next.js, Node.js, and TypeScript, and my latest missions have taken me deep into the realms of AI—integrating LLMs, agentic workflows, and conversational intelligence into real-time apps.<br/><br/>
+          Currently, I’m charting new frontiers at <b className="text-green-400">CometChat</b>, where I build scalable, user-friendly chat interfaces and AI-powered automation features. My journey is fueled by curiosity, creativity, and a drive to make digital experiences as seamless and joyful as a warp-speed ride through the cosmos.<br/><br/>
+          Whether I’m engineering scalable architectures, crafting pixel-perfect UIs, or collaborating with stellar teams, I thrive on turning ideas into reality and pushing the boundaries of what’s possible. When I’m not coding, you’ll find me exploring the universe through photography, poetry, and storytelling.<br/><br/>
+          <span className="text-green-400">Let’s connect and create something out of this world!</span>
         </p>
       </div>
     </div>

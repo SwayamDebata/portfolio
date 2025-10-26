@@ -20,27 +20,36 @@ import vue from '../assets/images/skill/vue.png'
 const Skills = () => {
   return (
     <>
-    <div id="skill" className="flex items-center justify-center bg-center bg-repeat h-screen w-full mt-24 lg:mt-0 mb-[550px]">
-      <div className=' bg-center pt-[120px] bg-cover bg-repeat h-screen flex flex-col tl:flex-col'>
-      
-      <h1 className="text-xl font-orbitron text-green-400 text-center items-center tl:pt-[220px]">SKILLS</h1>
-      <div className="flex flex-wrap justify-center gap-6">
-      <a href={HTML_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={html} alt="" /></a>
-      <a href={CSS_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={css3} alt="" /></a>
-      <a href={JS_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={javascript} alt="" /></a>
-      <a href={REACT_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={react} alt="" /></a>
-      <a href={NODE_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={node} alt="" /></a>
-      <a href={ANGULAR_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={angular} alt="" /></a>
-      <a href={VUE_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={vue} alt="" /></a>
-      <a href={TAILWIND_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={tailwind} alt="" /></a>
-      <a href={TS_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={typescript} alt="" /></a>
-      <a href={FIGMA_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={figma} alt="" /></a>
-      <a href={JAVA_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={java} alt="" /></a>
-      <a href={MYSQL_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={mysql} alt="" /></a>
-      {/* <a href={GIT_DOC_URL} target="_blank"><img className='w-20 h-auto mt-[30px]' src={git} alt="" /></a> */}
+      <div id="skill" className="flex items-center justify-center bg-center bg-repeat min-h-screen w-full mt-10 lg:mt-0 mb-20 px-2 sm:px-4">
+        <div className='bg-center pt-10 sm:pt-24 bg-cover bg-repeat min-h-screen flex flex-col tl:flex-col'>
+          <h1 className="text-xl sm:text-2xl font-orbitron text-green-400 text-center items-center pt-8 sm:pt-24">SKILLS</h1>
+          <p className="text-white text-md sm:text-lg text-center mb-6 sm:mb-8 max-w-xl sm:max-w-3xl mx-auto font-orbitron">
+            <span className="text-green-400">Tech Stack from Across the Galaxy</span><br/>
+            My toolkit is a constellation of languages, frameworks, and tools—each one a star powering my cosmic coding adventures.<br/><br/>
+            <span className="text-green-400">Languages & Frameworks:</span> JavaScript (ES6+), TypeScript, React.js, Next.js, React Native, AngularJS, Vue.js, Node.js, Java, RxJS<br/>
+            <span className="text-green-400">AI & Automation:</span> LLMs, LangChain, LangGraph, Mastra, Agentic AI, MCP Servers, Conversational AI, Prompt Engineering, NLP, Embeddings<br/>
+            <span className="text-green-400">Databases:</span> MongoDB, MySQL, MS SQL Server, Redis, Firebase<br/>
+            <span className="text-green-400">Frontend/UI:</span> HTML5, CSS3, Tailwind CSS, Bootstrap, Redux, Zustand, Material-UI, Styled Components, Responsive Design<br/>
+            <span className="text-green-400">Backend/Architecture:</span> REST APIs, GraphQL, WebSockets, Microservices<br/>
+            <span className="text-green-400">Cloud & DevOps:</span> AWS, Vercel, Netlify, Docker, CI/CD, Git, GitHub Actions<br/>
+            <span className="text-green-400">Testing & Tools:</span> Jest, Cypress, Playwright, Postman, ESLint, Prettier, Axios, Figma, Adobe XD<br/>
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a href={HTML_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={html} alt="HTML" /></a>
+            <a href={CSS_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={css3} alt="CSS3" /></a>
+            <a href={JS_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={javascript} alt="JavaScript" /></a>
+            <a href={REACT_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={react} alt="React" /></a>
+            <a href={NODE_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={node} alt="Node.js" /></a>
+            <a href={ANGULAR_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={angular} alt="Angular" /></a>
+            <a href={VUE_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={vue} alt="Vue" /></a>
+            <a href={TAILWIND_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={tailwind} alt="Tailwind" /></a>
+            <a href={TS_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={typescript} alt="TypeScript" /></a>
+            <a href={FIGMA_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={figma} alt="Figma" /></a>
+            <a href={JAVA_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={java} alt="Java" /></a>
+            <a href={MYSQL_DOC_URL} target="_blank" rel="noreferrer"><img className='w-20 h-auto mt-[30px]' src={mysql} alt="MySQL" /></a>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </>
   );
 }
