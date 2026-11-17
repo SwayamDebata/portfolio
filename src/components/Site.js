@@ -4,6 +4,7 @@ import {
   EARLIER,
   EVIDENCE,
   NAV,
+  ORQMESH,
   PLATE,
   PRACTICE,
   PROFILE,
@@ -11,6 +12,7 @@ import {
   SYSTEMS,
 } from "../content";
 import coast from "../assets/brahmani.jpg";
+import { RunFigure, SeamFigure } from "./OrqmeshFigures";
 import { PixelPortrait } from "./PixelArt";
 import { Valley } from "./Valley";
 
@@ -42,6 +44,10 @@ const Site = () => {
 
     sections.forEach((section) => observer.observe(section));
     onScroll();
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      document.getElementById(hash)?.scrollIntoView();
+    }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       observer.disconnect();
@@ -277,10 +283,132 @@ const Site = () => {
           </div>
         </section>
 
-        <section className="chapter" id="systems">
+        <section className="chapter" id="orqmesh">
           <div className="sheet">
             <div className="chapter-head">
               <span className="sheet-no">04</span>
+              <div>
+                <h2>Standardize the agent. Leave the customer’s stack alone.</h2>
+                <p className="lede">
+                  Orqmesh is the open-source cut of that rule. A Python SDK for
+                  a workflow that can pause for a person, with the model and
+                  the database kept outside the library.
+                </p>
+              </div>
+            </div>
+
+            <div className="prose">
+              {ORQMESH.story.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+
+            <dl className="facts orq-facts">
+              {ORQMESH.facts.map(([term, detail]) => (
+                <div key={term}>
+                  <dt>{term}</dt>
+                  <dd>{detail}</dd>
+                </div>
+              ))}
+            </dl>
+
+            <h3 className="orq-title">The path that kept repeating</h3>
+            <p className="orq-note">
+              This is the problem in the design note. It is not a feature list.
+              The published package runs a straight line through a path like
+              this, and can stop for a person. It does not extract, classify,
+              or call a model by itself.
+            </p>
+            <ol className="runway">
+              {ORQMESH.path.map(([term, detail]) => (
+                <li key={term}>
+                  <span>{term}</span>
+                  <strong>{detail}</strong>
+                </li>
+              ))}
+            </ol>
+
+            <h3 className="orq-title">What a run actually does</h3>
+            <RunFigure />
+            <ol className="runway runway-end">
+              {ORQMESH.run.map(([term, detail], index) => (
+                <li key={term}>
+                  <span>0{index + 1}</span>
+                  <strong>{term}</strong>
+                  <em>{detail}</em>
+                </li>
+              ))}
+            </ol>
+
+            <h3 className="orq-title">Where the library stops</h3>
+            <SeamFigure />
+            <ol className="layers">
+              {ORQMESH.layers.map((layer, index) => (
+                <li key={layer.name}>
+                  <span>0{index + 1}</span>
+                  <div>
+                    <strong>{layer.name}</strong>
+                    <p>{layer.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <h3 className="orq-title">In version 0.1.0b1</h3>
+            <div className="orq-can">
+              {ORQMESH.can.map((item) => (
+                <article key={item.name}>
+                  <h4>{item.name}</h4>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </div>
+
+            <h3 className="orq-title">Not in this version</h3>
+            <ul className="orq-cannot">
+              {ORQMESH.cannot.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="orq-title">Three proofs the note asks for</h3>
+            <p className="orq-note">
+              The design says the thesis is proved only if one runtime can run
+              three different businesses, and each business brings only its own
+              contracts. None of the three is in the package. The runnable
+              example is a synthetic document review.
+            </p>
+            <div className="cases">
+              {ORQMESH.cases.map((item) => (
+                <article key={item.name}>
+                  <span>{item.stack}</span>
+                  <h4>{item.name}</h4>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </div>
+
+            <pre className="command">
+              <code>{ORQMESH.install}</code>
+            </pre>
+            <p className="orq-note">
+              Python 3.11 or later. The version is a beta, so pip needs the
+              version written out. A new run id every time. Nothing sensitive
+              in a checkpoint.
+            </p>
+            <div className="actions">
+              <a href={ORQMESH.guide}>User guide</a>
+              <a href={ORQMESH.pypi}>PyPI</a>
+              <a href={ORQMESH.github}>Source</a>
+              <a href={ORQMESH.issues}>Issues</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="chapter" id="systems">
+          <div className="sheet">
+            <div className="chapter-head">
+              <span className="sheet-no">05</span>
               <div>
                 <h2>Other systems, including the early ones.</h2>
                 <p className="lede">
@@ -330,7 +458,7 @@ const Site = () => {
         <section className="chapter" id="practice">
           <div className="sheet">
             <div className="chapter-head">
-              <span className="sheet-no">05</span>
+              <span className="sheet-no">06</span>
               <div>
                 <h2>What the work is made of.</h2>
                 <p className="lede">
@@ -357,7 +485,7 @@ const Site = () => {
         <section className="chapter" id="contact">
           <div className="sheet close">
             <div className="chapter-head" style={{ gridColumn: "1 / -1" }}>
-              <span className="sheet-no">06</span>
+              <span className="sheet-no">07</span>
               <div>
                 <h2>If this is your problem, write.</h2>
                 <p className="lede">

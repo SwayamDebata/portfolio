@@ -22,6 +22,7 @@ export const PROFILE = {
 export const NAV = [
   { id: "record", label: "Record" },
   { id: "earth", label: "ModelEarth" },
+  { id: "orqmesh", label: "Orqmesh" },
   { id: "systems", label: "Systems" },
   { id: "practice", label: "Practice" },
   { id: "contact", label: "Contact" },
@@ -267,9 +268,129 @@ export const PRACTICE = [
   },
 ];
 
+export const ORQMESH = {
+  pypi: "https://pypi.org/project/orqmesh/",
+  github: "https://github.com/SwayamDebata/orqmesh",
+  issues: "https://github.com/SwayamDebata/orqmesh/issues",
+  install: 'pip install "orqmesh==0.1.0b1"',
+  guide: "/orqmesh",
+  story: [
+    "The same shape of work kept arriving. A document comes in. Someone has to read it, name what it is, check it against a rule, and either finish the case or hand it to a person with the record intact. The database changes with the client. The model changes with the contract. The path does not.",
+    "I wrote that down as a design note and called the larger framework ADK. The rule at the top of it is the whole idea: standardize how an agent works, and never assume how the customer's infrastructure works. The customer keeps the database, the model, the credentials, and the business rules. The framework keeps the runtime.",
+    "Orqmesh is the part of that note I have published. Version 0.1.0b1, Apache-2.0, on PyPI, with no required third-party runtime. It is an alpha, and it is a library. It does not host a service, ship a model, or sign in a user.",
+  ],
+  facts: [
+    ["Package", "orqmesh"],
+    ["Version", "0.1.0b1"],
+    ["License", "Apache-2.0"],
+    ["Python", "3.11 and later"],
+    ["Status", "Alpha"],
+    ["Core deps", "None"],
+  ],
+  path: [
+    ["Arrive", "A document, a message, a case"],
+    ["Read", "Extract what the schema asks for"],
+    ["Name", "Classify against the contract"],
+    ["Check", "Rules before a model decides"],
+    ["Stop", "A person, when the model should not"],
+    ["Finish", "Write back to the system they already have"],
+  ],
+  run: [
+    ["Start", "A new run id, and a JSON input"],
+    ["Step", "Named handlers, one after another"],
+    ["Save", "A checkpoint after each boundary"],
+    ["Pause", "A review request, if a person must decide"],
+    ["End", "Completed, rejected, or failed"],
+  ],
+  layers: [
+    {
+      name: "Application",
+      detail:
+        "The schemas, rules, tools, credentials, and clients. This is the part that changes per customer, and Orqmesh does not own it.",
+    },
+    {
+      name: "Core",
+      detail:
+        "Workflow and AsyncWorkflow, the checkpoint seam, the review contract, and the tool registry with a per-agent allowlist.",
+    },
+    {
+      name: "Seams",
+      detail:
+        "Thin adapters. A LangGraph graph the application injects. Azure Blob, Cosmos, and Content Understanding clients the application injects. Tested with fakes.",
+    },
+    {
+      name: "Elsewhere",
+      detail:
+        "The model, the database, the identity system, and the desk a person actually uses. Those stay outside the package.",
+    },
+  ],
+  can: [
+    {
+      name: "Sequential workflows",
+      detail:
+        "Workflow runs named synchronous steps in order. AsyncWorkflow awaits named async steps in the same order, and calls the checkpoint store on a worker thread so a blocking save does not sit on the event loop.",
+    },
+    {
+      name: "A written state",
+      detail:
+        "WorkflowState holds the run id, status, input, step outputs, the next step, a pending review, the review record, and a failure string. It is JSON. CheckpointStore is load and save. JsonFileCheckpointStore replaces a local file atomically.",
+    },
+    {
+      name: "A person in the path",
+      detail:
+        "A step returns ReviewRequest and the run becomes waiting_review. Later steps do not run. resume() records approval and continues, or rejection and stops. The reviewer string is required. The application has to decide who is allowed to be that reviewer.",
+    },
+    {
+      name: "Tools with a list",
+      detail:
+        "ToolRegistry registers callables by name. An Agent may call only the names on its allowlist, through AgentContext.call_tool(). This is a programming boundary. It is not a sandbox.",
+    },
+    {
+      name: "Adapters that stay thin",
+      detail:
+        "LangGraphAdapter calls an injected object’s ainvoke() and checks that the result is a mapping. AzureBlobStore reads a whole blob into memory. AzureCosmosRepository upserts and queries. AzureContentUnderstandingAdapter runs a supplied client’s submit and poll on a worker thread. None of them create credentials or own the client.",
+    },
+    {
+      name: "One worked example",
+      detail:
+        "A synthetic document review. The caller sets requires_review. The workflow does not read the document and does not call a model. If review is not required, it is approved. If it is required, the run pauses. Rejection ends with no final result. A success returns finalize_document with status, document id, title, and the approval. The content is stored in the checkpoint, so the example is for data you can afford to leave on disk.",
+    },
+  ],
+  cannot: [
+    "Distributed checkpoints, file encryption, or more than one worker sharing a run",
+    "Branching, fan-out, retries, timeouts, or idempotent side effects",
+    "A model adapter, including Azure OpenAI",
+    "Authentication, authorization, redaction, or an audit log",
+    "A user interface, a queue, or a hosted runtime",
+    "Certification against a live provider SDK",
+  ],
+  cases: [
+    {
+      name: "Invoice",
+      stack: "The note’s first proof",
+      detail:
+        "PostgreSQL and Azure OpenAI, in the design. Extract, classify, validate against vendor and purchase order, then post or hand to a person. The package does not ship this workflow.",
+    },
+    {
+      name: "Loan file",
+      stack: "The note’s second proof",
+      detail:
+        "SQL Server and OpenAI, in the design. Same runtime, different schema and different model. The point of the proof is that the runtime does not move when the stack does.",
+    },
+    {
+      name: "Claim",
+      stack: "The note’s third proof",
+      detail:
+        "MongoDB and Gemini, in the design. Three applications, one spine, and each application supplies only its own contracts, mappings, rules, and tools.",
+    },
+  ],
+};
+
 export const ADDRESSES = [
   { label: "ModelEarth", href: "https://www.modelearth.in" },
   { label: "ModelEarth API", href: "https://api.modelearth.in" },
+  { label: "Orqmesh", href: "https://pypi.org/project/orqmesh/" },
+  { label: "Orqmesh source", href: "https://github.com/SwayamDebata/orqmesh" },
   { label: "Founder", href: "mailto:founder@modelearth.in" },
   { label: "Work mail", href: "mailto:swayam@modelearth.in" },
   { label: "Personal mail", href: "mailto:swayamdebata2003@gmail.com" },
