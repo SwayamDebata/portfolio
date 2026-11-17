@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the founder record", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/scarce thing/i);
+  expect(screen.getByRole("link", { name: "Resume" })).toHaveAttribute("href", "/resume.pdf");
+  expect(screen.getByRole("heading", { name: /ModelEarth keeps the hours/i })).toBeInTheDocument();
 });
