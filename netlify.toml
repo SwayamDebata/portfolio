@@ -1,0 +1,6 @@
+# The guide lives at /orqmesh inside the app. There is no file at that path,
+# so a static host has to serve index.html and let the app read the URL.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
